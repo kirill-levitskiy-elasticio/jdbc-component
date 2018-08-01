@@ -70,7 +70,7 @@ public class GetRowsPollingTrigger implements Module {
     }
 
     if (snapshot.containsKey(PROPERTY_SKIP_NUMBER))
-      skipNumber = Integer.parseInt(snapshot.getString(PROPERTY_SKIP_NUMBER));
+      skipNumber = snapshot.getInt(PROPERTY_SKIP_NUMBER);
 
     if (snapshot.containsKey(PROPERTY_TABLE_NAME) && snapshot.get(PROPERTY_TABLE_NAME) != null && !snapshot.getString(PROPERTY_TABLE_NAME)
         .equals(tableName)) {

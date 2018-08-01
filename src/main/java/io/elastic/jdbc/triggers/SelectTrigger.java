@@ -60,7 +60,7 @@ public class SelectTrigger implements Module {
     logger.info("EIO_LAST_POLL = {}", pollingValue);
     String sqlQuery = configuration.getString(SQL_QUERY_VALUE);
     if (snapshot.get(PROPERTY_SKIP_NUMBER) != null)
-      skipNumber = Integer.parseInt(snapshot.getString(PROPERTY_SKIP_NUMBER));
+      skipNumber = snapshot.getInt(PROPERTY_SKIP_NUMBER);
     logger.info("SQL QUERY {} : ", sqlQuery);
     ResultSet rs = null;
     logger.info("Executing select trigger");

@@ -44,7 +44,7 @@ public class SelectAction implements Module {
     }
 
     if (snapshot.get(PROPERTY_SKIP_NUMBER) != null)
-      skipNumber = Integer.parseInt(snapshot.getString(PROPERTY_SKIP_NUMBER));
+      skipNumber = snapshot.getInt(PROPERTY_SKIP_NUMBER);
 
     Utils.columnTypes = Utils.getVariableTypes(sqlQuery);
     logger.info("Detected column types: " + Utils.columnTypes);
